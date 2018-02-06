@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.license     = 'UNLICENSE'
   s.required_ruby_version     = '>= 2.0.0'
 
-  s.add_dependency('rdf', '~> 1.1')
+  s.add_dependency('rdf', '~> 2')
 
   s.add_development_dependency('pry')
   s.add_development_dependency('rspec')

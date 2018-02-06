@@ -14,6 +14,8 @@ module RDF::Markdown
     # @see http://roopc.net/posts/2014/markdown-cfg/
     GRAMMAR = %r(.*).freeze
 
+    # support ActiveJob serialization
+    include GlobalID::Identification
     ##
     # Initializes an RDF::Literal with Mardown datatype.
     #
@@ -24,5 +26,14 @@ module RDF::Markdown
     def initialize(value, options = {})
       super
     end
+    
+    def self.find(id)
+      new(id)
+    end
+    
+    def id
+      value
+    end
+    
   end
 end
